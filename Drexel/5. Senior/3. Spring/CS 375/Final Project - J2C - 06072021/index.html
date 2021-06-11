@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Project</title>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <img src="https://cdn11.bigcommerce.com/s-devyt8p84f/product_images/uploaded_images/nba-banner-final.jpg" width:100%>
+
+<br>
+<div>
+    <input id="gameSearchBar" type="text" placeholder="YYYY-MM-DD">
+    
+
+</div>
+<br>
+
+<div>
+    Put in Proper Date Format of YYYY-MM-DD to Use "Recent" and "Upcoming" buttons
+</div>
+<div>
+    Click any button to refresh
+</div>
+<div>
+    Do not get rid of the above text box
+</div>
+<div>
+    Inspect network to see printed JSON requests
+</div>
+<br>
+<script src="client.js">
+    //This is calling the client code
+</script> 
+<button id="btn" class="button">
+    Get Live Game Stats Example
+</button>
+<br>
+<br>
+<button onclick="getUpcoming()" class="button">
+    Get Upcoming Game Stats Example
+</button>
+<br>
+<br>
+<button onclick="getRecent()" class="button">
+    Get Recent Game Stats Example
+</button>
+<br>
+<br>
+<div>
+	<div class="gameList" style="width: 30%; float: left;">
+        Recent Games (Day before entered date)
+        <table id="recentGameTable">
+            
+            
+        </table>
+    </div>
+    <div class="gameList" style="width: 30%; float: left;">
+        Live Games
+        <table id="liveGameTable">
+            
+            
+        </table>
+    </div>
+    <div class="gameList" style="width: 30%; float: left;">
+        Upcoming Games (Day after entered date)
+        <table id="upcomingGameTable">
+            
+            
+        </table>
+    </div>
+
+</div>
+
+<script>
+
+
+
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click", function() {
+        getLive();
+        
+    }, false);  
+
+    
+
+    window.addEventListener("DOMContentLoaded", loadedHandler);
+
+    function loadedHandler(){
+        let textBox = document.querySelector("#gameSearchBar");
+
+        textBox.addEventListener("keypress", keypressHandler);
+    }
+
+    function keypressHandler(event) {
+        if (event.charCode == 13) {
+            let userSearchValue = event.target.value;
+            
+            //make request with userSearchValue (which is what the user inputs) after pressing enter
+        }
+    }
+
+    
+    
+
+</script>
+<body>
+    <div id="error"></div>
+</body>
+</html>
