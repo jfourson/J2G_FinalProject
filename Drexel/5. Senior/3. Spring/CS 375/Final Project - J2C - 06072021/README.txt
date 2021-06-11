@@ -1,4 +1,4 @@
-In order to run out webpage, run the server using:
+In order to run our webpage, run the server using:
 
 node server.js
 
