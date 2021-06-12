@@ -18,10 +18,10 @@ function renderDataRecent(data) {
         
         
 
-        point1.appendChild(logo1);
+        point1.appendChild(logo2);
         point1.appendChild(document.createTextNode(data.api.games[i].vTeam.fullName));
         point2.appendChild(document.createTextNode(data.api.games[i].vTeam.score.points));
-        point3.appendChild(logo2);
+        point3.appendChild(logo1);
         point3.appendChild(document.createTextNode(data.api.games[i].hTeam.fullName));
         point4.appendChild(document.createTextNode(data.api.games[i].hTeam.score.points));
 
