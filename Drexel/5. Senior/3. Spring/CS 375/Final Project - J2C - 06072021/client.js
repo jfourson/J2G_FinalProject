@@ -66,8 +66,7 @@ function renderDataLive(data) {
         score.appendChild(point3);
         team.appendChild(point2);
         score.appendChild(point4);
-        team.appendChild(spacer1);
-        score.appendChild(spacer2);
+       
 
         
         table.appendChild(team);
@@ -105,7 +104,7 @@ function renderDataUpcoming(data) {
 
         
         table.appendChild(team);
-        table.appendChild(document.createTextNode("---------------------------------------------------------------"));
+        table.appendChild(document.createTextNode("--------------------------------------------------"));
         
     }
 }
